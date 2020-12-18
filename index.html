@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js" defer></script>
+    <title>Document</title>
+    <button
+      type="button"
+      name="dark_light"
+      onclick="toggleDarkLight()"
+      id="btntxt"
+      title="Toggle dark/light mode"
+    >
+      🌛
+    </button>
+  </head>
+  <body class="dark-mode" id="cls">
+    <div class="api" id="api">
+      <div id="joke-container">
+        <h1>Dad Jokes</h1>
+        <div id="joke-display">
+          <div id="joke-text" class="hidden"></div>
+          <div id="joke-controls">
+            <button id="joke-control-random" class="btn btn-secondary">
+              Random joke
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+  </body>
+</html>

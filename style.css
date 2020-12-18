@@ -1,0 +1,298 @@
+header {
+  font-family: "Times New Roman", serif;
+}
+
+hr {
+  border-width: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  white-space: pre-line;
+  overflow: hidden;
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 760px) {
+  .aboutMe {
+    padding-left: 20px;
+    display: inline-block;
+  }
+}
+
+.aboutMe {
+  padding-top: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .body {
+    text-align: center;
+  }
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark-mode a {
+  z-index: 1;
+  font-size: 20px;
+  color: #eeeeee;
+}
+
+body.dark-mode button {
+  float: right;
+  background-color: #eee;
+  color: #111;
+}
+
+body.light-mode button {
+  float: right;
+  background-color: #111;
+  color: #eee;
+}
+
+body.light-mode {
+  background-color: #eee;
+  color: #111;
+}
+
+body.light-mode a {
+  z-index: 1;
+  font-size: 20px;
+  color: #111;
+}
+
+body hr.dark-mode {
+  color: #eeeeee;
+}
+
+body hr .light-mode {
+  color: #807f7f;
+}
+
+.header {
+  height: 100px;
+  background: transparent;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.menu {
+  float: right;
+  line-height: 100px;
+}
+.menu a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn {
+  float: right;
+}
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+body.dark-mode .show-menu-btn {
+  color: whitesmoke;
+}
+
+body.light-mode .show-menu-btn {
+  color: #333;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: #eee;
+  background-color: #807f7f;
+  border-radius: 10%;
+  border-width: 50%;
+  border: 50%;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+@media screen and (max-width: 800px) {
+  .show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+}
+
+.content {
+  justify-content: center;
+  margin: auto;
+}
+
+.displayed {
+  display: block;
+  margin-left: auto;
+  padding: 0px 22px 0px 22px;
+}
+
+.about h3 {
+  text-align: center;
+}
+@media (min-width: 800px) and (max-width: 1800) {
+  .displayed {
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-left: 20%;
+  }
+}
+
+.contact-section {
+  background: transparent;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.inner-width {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.contact-section h1 {
+  font-size: 20px;
+  color: #eee;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.placeholderRed::placeholder {
+  color: red;
+}
+
+.name,
+.email,
+.phone,
+.message {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  padding: 10px 6px;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+#name,
+#email,
+#phone,
+#message {
+  color: #eee;
+}
+.name {
+  float: left;
+  width: 270px;
+}
+
+.email {
+  float: right;
+  width: 270px;
+}
+
+.phone {
+  width: 270px;
+}
+
+.message {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .name,
+  .email {
+    width: 100%;
+  }
+}
+#joke-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+#joke-display {
+  margin-top: 2rem;
+  text-align: center;
+}
+#joke-text,
+#joke-loading {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+.hidden {
+  display: none;
+}
+
+.poke {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+}
